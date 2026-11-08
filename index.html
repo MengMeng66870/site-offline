@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+  _   _            ____   _            ____   _             _____   _   _       _   _         
+ | | | |   __ _   / ___| (_)   ___    / ___| (_)      ___  |_   _| | | | |   __| | (_)   ___  
+ | |_| |  / _` | | |  _  | |  / _ \  | |  _  | |     / __|   | |   | | | |  / _` | | |  / _ \ 
+ |  _  | | (_| | | |_| | | | | (_) | | |_| | | |     \__ \   | |   | |_| | | (_| | | | | (_) |
+ |_| |_|  \__,_|  \____| |_|  \___/   \____| |_|     |___/   |_|    \___/   \__,_| |_|  \___/ 
+                                                                                              
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>服务器离线</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48' role='img' aria-labelledby='title description'%3E%3Ctitle id='title'%3E%E8%90%A9%E8%80%BB%E5%B7%A5%E4%BD%9C%E5%AE%A4%E6%A0%87%E5%BF%97%E5%8F%98%E4%BD%9F 2%3C/title%3E%3Cdesc id='description'%3E%E4%BB%A5%E4%B8%A4%E7%89%87%E7%AE%80%E6%B4%81%E6%96%B0%E5%8F%B6%E5%92%8C%E4%B8%80%E7%AC%94%E7%94%9F%E9%95%BF%E6%9B%B2%E7%BA%BF%E6%9E%84%E6%88%90%E7%9A%84%E6%A4%8D%E7%89%A9%E6%A0%87%E5%BF%97%3C/desc%3E%3Cstyle%3E.leaf-main %7B fill: %233e6b4f; %7D .leaf-light %7B fill: %237fb08e; %7D .stem %7B fill: none; stroke: %233e6b4f; stroke-width: 2.8; stroke-linecap: round; %7D @media (prefers-color-scheme: dark) %7B .leaf-main %7B fill: %23a5cbb0; %7D .leaf-light %7B fill: %237fb08e; %7D .stem %7B stroke: %23a5cbb0; %7D %7D%3C/style%3E%3Cg transform='translate(.8 .35) scale(.96)'%3E%3Cpath class='leaf-main' d='M22.8 23.3C11.3 23.1 6.7 16.8 7.3 8.2c9.2.1 15.5 5.2 16.5 14.8l-.1.3z'/%3E%3Cpath class='leaf-light' d='M25 22.8C25.2 13.5 31.1 8 41 8.5c-.6 8.8-6.1 14.4-16 14.8z'/%3E%3Cpath class='stem' d='M24 21.5c-.2 8.4 1.1 14.5 5.2 19.8'/%3E%3C/g%3E%3C/svg%3E">
+    <style>
+        :root {
+            color-scheme: light dark;
+            --page-background: rgb(239, 239, 239);
+            --text-color: #000;
+            --card-background: #fff;
+            --link-color: #3e6b4f;
+            --copyright-color: #555;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --page-background: #141816;
+                --text-color: #e5e9e6;
+                --card-background: #242b27;
+                --link-color: #a5cbb0;
+                --copyright-color: #b8c2bc;
+            }
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background: var(--page-background);
+            color: var(--text-color);
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .card-container {
+            width: 35em;
+            max-width: calc(100% - 32px);
+            margin: 64px auto;
+        }
+
+        .card {
+            opacity: 0.87;
+            padding: 24px 32px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            border-radius: 2px;
+            background: var(--card-background);
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .card-title {
+            margin: 0;
+        }
+
+        .card-list {
+            padding-left: 24px;
+        }
+
+        .card-footer {
+            margin-top: 20px;
+            padding: 16px 24px;
+        }
+
+        .footer-brand {
+            float: right;
+        }
+
+        .node {
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            opacity: 0.68;
+            font-size: 48px;
+            font-weight: 400;
+        }
+
+        li {
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 0.85em;
+            opacity: 0.68;
+            color: var(--copyright-color);
+        }
+
+        .copyright a {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <h1 class="card-title">服务器离线</h1>
+                <p><strong>出现此页面时可能是网络波动导致，请尝试刷新页面</strong></p>
+                <p>如果多次刷新仍然不变，可能是运营商网络出现了问题，<br>也可能是我们在进行离线维护</p>
+            <h3>常规维护时间：8:30-9:00&nbsp;或&nbsp;22:00-23:00</h3>
+                <p>维护记录：</p>
+                    <ul class="card-list">
+                        <li>2026年11月5日&nbsp;19:15&nbsp;-&nbsp;2026年11月5日&nbsp;15:17 <br> 网站进行不停机迁移，将Javascript全部转为TypeScript</li>
+                        <li>2026年11月6日&nbsp;22:57&nbsp;-&nbsp;2026年11月7日&nbsp;3:12 <br> 服务器进行离线迁移，原Hyper-V数据转移至新裸金属服务器</li>
+                    </ul>
+                <p><em>&emsp;*日常维护不进行记录</em></p>
+        </div>
+        <div class="card card-footer">
+            <a href="mailto:service@hagiogi.com">联系邮箱</a>
+            <span class="footer-brand">
+                <a>Cloudflare&ensp;Pages</a>
+            </span>
+        </div>
+        <div class="copyright"><a href="https://www.hagiogi.com/copyright/" target="_blank" rel="noopener">© 2023–2026 萩荻工作室 · HAGIOGI STUDIO</a></div>
+    </div>
+</body>
+</html>
